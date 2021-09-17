@@ -53,7 +53,7 @@ class Transition extends React.Component {
     this.updateStatus();
   }
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     const { status } = this.state;
 
     if (nextProps.in) {

@@ -350,7 +350,7 @@ class Modal extends React.Component {
     return backdrop;
   };
 
-  componentWillReceiveProps(nextProps) {
+  UNSAFE_componentWillReceiveProps(nextProps) {
     if (nextProps.show) {
       this.setState({exited: false});
     } else if (!nextProps.transition) {
@@ -359,7 +359,7 @@ class Modal extends React.Component {
     }
   }
 
-  componentWillUpdate(nextProps) {
+  UNSAFE_componentWillUpdate(nextProps) {
     if (!this.props.show && nextProps.show) {
       this.checkForFocus();
     }
